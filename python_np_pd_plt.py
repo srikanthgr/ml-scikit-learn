@@ -64,5 +64,30 @@ df = pd.read_csv("storepurchasedata.csv")
 
 df.describe()
 df.info()
+df.head()
+df.head(2)
 
+X = df.iloc[:, :-1].values
+y = df.iloc[:, -1].values
 
+# matplot lib 
+
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [10,25,35,40,50,60,80,90,95,100]
+
+plt.plot(x,y)
+plt.scatter(x,y)
+
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Sample plot')
+plt.plot(x,y)
+
+plt.xlabel('Age')
+plt.ylabel('Salary')
+plt.title('Salary Analysis')
+plt.plot(df['Age'],df['Salary'])
+
+plt.hist([10,20,20,30,30,30,40,40,50])
